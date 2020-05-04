@@ -2368,14 +2368,14 @@ class Ui_FleetConsole(object):
         self.FleetConsole = FleetConsole
 
     def sign_up(self, username, email):
-        self.aws_cog = Cognito('us-west-2_v2uuXZc0u', '5spcc8a02m56e6n6f6icst1vas', username= username, access_key='AKIAIHY4RSMDOJ3QRZJA',
-        secret_key='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', user_pool_region = 'us-west-2')
+        self.aws_cog = Cognito('*******', '********', username= username, access_key='******',
+        secret_key='********', user_pool_region = '*******')
         self.aws_cog.add_base_attributes(email=email)
         self.aws_cog.register(username, '123456')
         self.aws_cog.admin_confirm_sign_up(username=username)
     def cognito_delete_user(self, username):
-        self.aws_cog = Cognito('us-west-2_v2uuXZc0u', '5spcc8a02m56e6n6f6icst1vas', username= username, access_key='AKIAIHY4RSMDOJ3QRZJA',
-        secret_key='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', user_pool_region = 'us-west-2')
+        self.aws_cog = Cognito('********', '*********', username= username, access_key='************',
+        secret_key='***********', user_pool_region = '***********')
         self.aws_cog.admin_delete_user();
 
     def print_exp_notification(self):
